@@ -19,12 +19,24 @@ A  backend project to manage and connect alumni with their batch members. This p
 - bcrypt for password hashing
 - ----
 ##  Project Structure
-├── batch_alumni/
-│ ├── config/
-│ ├── controllers/
-│ ├── middleware/
-│ ├── models/
-│ ├── routes/
-│ ├── server.js
-├── package.json
-└── README.md
+batch_alumni/
+│── config/
+│   └── db.js
+│
+│── controllers/
+│   ├── userController.js
+│   └── alumniController.js
+│
+│── middleware/
+│   ├── authMiddleware.js
+│   └── errorHandler.js
+│
+│── models/
+│   ├── userModel.js
+│   └── alumniModel.js
+│
+│── routes/
+│   ├── userRoutes.js
+│   └── alumniRoutes.js
+│
+│── server.js
