@@ -1,5 +1,5 @@
 #  Batch Alumni Directory
-A full-stack web application to manage and connect alumni with their batch members. This project allows users to register, login, and manage alumni profiles with secure authentication.
+A  backend project to manage and connect alumni with their batch members. This project allows users to register, login, and manage alumni profiles with secure authentication.
 
 ## Features
 - User registration and login (JWT authentication)
@@ -18,3 +18,13 @@ A full-stack web application to manage and connect alumni with their batch membe
 - JSON Web Token (JWT)
 - bcrypt for password hashing
 - ----
+##Project Structure:**
+├── batch_alumni/
+│ ├── config/
+│ ├── controllers/
+│ ├── middleware/
+│ ├── models/
+│ ├── routes/
+│ ├── server.js
+├── package.json
+└── README.md
