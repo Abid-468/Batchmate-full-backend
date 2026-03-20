@@ -18,7 +18,7 @@ A  backend project to manage and connect alumni with their batch members. This p
 - JSON Web Token (JWT)
 - bcrypt for password hashing
 - ----
-##Project Structure:**
+##  Project Structure
 ├── batch_alumni/
 │ ├── config/
 │ ├── controllers/
