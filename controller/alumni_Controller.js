@@ -1,22 +1,22 @@
 const asyncHandler=require("express-async-handler");
 const alumni=require("../model/alumniModel");
 const get_all_alumni = asyncHandler(async (req, res) => {
-  const { name, city, series, department, job, search, page, limit } = req.query;
+  const { name, city, batch, department, profession, search, page, limit } = req.query;
   let filter = {};
 
   if (name) filter.name = { $regex: name, $options: "i" };
   if (city) filter.city = { $regex: city, $options: "i" };
-  if (series) filter.series = series;
+  if (batch) filter.batch = batch;
   if (department) filter.department = { $regex: department, $options: "i" };
-  if (job) filter.job = { $regex: job, $options: "i" };
+  if (profession) filter.profession = { $regex: profession, $options: "i" };
 
   if (search) {
     filter.$or = [
       { name: { $regex: search, $options: "i" } },
       { city: { $regex: search, $options: "i" } },
       { department: { $regex: search, $options: "i" } },
-      { job: { $regex: search, $options: "i" } },
-      { series: { $regex: search, $options: "i" } },
+      { profession: { $regex: search, $options: "i" } },
+      { batch: { $regex: search, $options: "i" } },
     ];
   }
   const pageNumber = parseInt(page) || 1;

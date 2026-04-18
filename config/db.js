@@ -7,9 +7,10 @@ const db = async () => {
       connect.connection.host,
       connect.connection.name,
     );
+    return connect;
   } catch (err) {
-    console.log(err);
-    process.exit(1);
+    console.error("Database connection failed:", err);
+    throw err;
   }
 };
 module.exports = db;

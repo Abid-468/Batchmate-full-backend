@@ -12,6 +12,7 @@ const userSchema=mongoose.Schema({
     password:{
         type:String,
         required:[true,"Add the user password"],
+        select: false,
     },
 
 },{
