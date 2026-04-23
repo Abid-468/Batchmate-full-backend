@@ -2,7 +2,7 @@ const asyncHandler=require("express-async-handler");
 const alumni=require("../model/alumniModel");
 const get_all_alumni = asyncHandler(async (req, res) => {
   const { name, city, batch, department, profession, search, page, limit } = req.query;
-  let filter = {};
+  let filter = { user_id: req.user.id };
 
   if (name) filter.name = { $regex: name, $options: "i" };
   if (city) filter.city = { $regex: city, $options: "i" };
